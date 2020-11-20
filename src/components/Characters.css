@@ -1,0 +1,44 @@
+.basic__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.align__items{
+    display: flex;
+    align-items: center;
+}
+
+.space__between{
+    justify-content: space-between;
+}
+
+.blue{
+    color: blue;
+}
+
+.red{
+    color: red;
+}
+
+.player{
+    border-bottom: 1px solid darkgrey;
+}
+
+.trim {
+    position:relative;
+    overflow: hidden;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.trim img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    height:100%;
+}
