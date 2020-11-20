@@ -1,0 +1,7 @@
+{
+  "name": "characterSheet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
