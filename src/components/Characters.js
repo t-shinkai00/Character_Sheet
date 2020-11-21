@@ -1,10 +1,7 @@
 import React from "react";
 import {
   IonCard,
-  IonHeader,
-  IonCardTitle,
   IonCardContent,
-  IonCardSubtitle,
   IonChip,
   IonCardHeader,
   IonAvatar,
@@ -12,12 +9,6 @@ import {
   IonRow,
   IonCol,
   IonGrid,
-  IonText,
-  IonListHeader,
-  IonItem,
-  IonList,
-  IonItemSliding,
-  IonButton,
 } from "@ionic/react";
 
 /*
