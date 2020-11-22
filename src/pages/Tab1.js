@@ -8,7 +8,6 @@ import {
   IonContent,
 } from "@ionic/react";
 
-import "./Tab1.css";
 import Characters from "../components/Characters";
 
 function Tab1() {
@@ -17,13 +16,13 @@ function Tab1() {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Character Sheet</IonTitle>
+            <IonTitle>作成済みのキャラクターシート</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
-              <IonTitle size="large">Character Sheet</IonTitle>
+              <IonTitle size="large">作成済みのキャラクターシート</IonTitle>
             </IonToolbar>
           </IonHeader>
           <Characters />

@@ -20,7 +20,7 @@ import {
 } from "@ionic/react";
 
 function Deatail() {
-  const { id } = useParams();
+  const { index } = useParams();
 
   const characters = [
     {
@@ -124,14 +124,14 @@ function Deatail() {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>{characters[id].characterName}</IonTitle>
+            <IonTitle>{characters[index].characterName}</IonTitle>
             <IonBackButton defaultHref="/tab1" slot="start" />
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
           {/* <IonHeader collapse="condense">
             <IonToolbar>
-              <IonTitle>{characters[id].characterName}</IonTitle>
+              <IonTitle>{characters[index].characterName}</IonTitle>
               <IonBackButton defaultHref="/tab1" slot="start" />
             </IonToolbar>
           </IonHeader> */}
@@ -139,7 +139,7 @@ function Deatail() {
             <IonCardHeader style={{ display: "flex", alignItems: "center" }}>
               <IonAvatar>
                 <img
-                  src={characters[id].profilePicture}
+                  src={characters[index].profilePicture}
                   alt="キャラクターアイコン"
                 />
               </IonAvatar>
@@ -147,14 +147,14 @@ function Deatail() {
                 <IonRow>
                   <IonCol>
                     <IonLabel color="dark">
-                      <h2>{characters[id].characterName}</h2>
+                      <h2>{characters[index].characterName}</h2>
                     </IonLabel>
                   </IonCol>
                 </IonRow>
                 <IonRow>
                   <IonCol>
                     <IonLabel color="medium">
-                      <p>{characters[id].playerName}</p>
+                      <p>{characters[index].playerName}</p>
                     </IonLabel>
                   </IonCol>
                 </IonRow>
@@ -166,20 +166,20 @@ function Deatail() {
                   <h3>基本情報</h3>
                 </IonLabel>
                 <IonChip color="primary" outline="true">
-                  年齢: {characters[id].age}
+                  年齢: {characters[index].age}
                 </IonChip>
                 <IonChip color="primary" outline="true">
-                  性別: {characters[id].gender}
+                  性別: {characters[index].gender}
                 </IonChip>
                 <IonChip color="primary" outline="true">
-                  職業: {characters[id].occupation}
+                  職業: {characters[index].occupation}
                 </IonChip>
               </section>
               <section>
                 <IonLabel>
                   <h3>能力値</h3>
                 </IonLabel>
-                {characters[id].characteristics.map((characteristic) => (
+                {characters[index].characteristics.map((characteristic) => (
                   <IonChip color="success" outline="true">
                     {characteristic.name}: {characteristic.value}
                   </IonChip>
@@ -189,17 +189,19 @@ function Deatail() {
                 <IonLabel>
                   <h3>技能値</h3>
                 </IonLabel>
-                {characters[id].investigatorSkills.map((investigatorSkill) => (
-                  <IonChip color="danger" outline="true">
-                    {investigatorSkill.name}: {investigatorSkill.value}
-                  </IonChip>
-                ))}
+                {characters[index].investigatorSkills.map(
+                  (investigatorSkill) => (
+                    <IonChip color="danger" outline="true">
+                      {investigatorSkill.name}: {investigatorSkill.value}
+                    </IonChip>
+                  )
+                )}
               </section>
               <section>
                 <IonLabel>
                   <h3>持ち物</h3>
                 </IonLabel>
-                {characters[id].belongings.map((belonging) => (
+                {characters[index].belongings.map((belonging) => (
                   <IonChip color="secondary" outline="true">
                     {belonging}
                   </IonChip>
@@ -209,7 +211,7 @@ function Deatail() {
                 <IonLabel style={{ paddingButtom: "100px" }}>
                   <h3>武器</h3>
                 </IonLabel>
-                {characters[id].weapons.map((weapon) => (
+                {characters[index].weapons.map((weapon) => (
                   <IonChip color="dark-tint" outline="true">
                     {weapon}
                   </IonChip>
@@ -219,7 +221,7 @@ function Deatail() {
                 <IonLabel>
                   <h3>状態</h3>
                 </IonLabel>
-                {characters[id].statuses.map((status) => (
+                {characters[index].statuses.map((status) => (
                   <IonChip color="warning" outline="true">
                     {status}
                   </IonChip>
@@ -229,7 +231,7 @@ function Deatail() {
                 <IonLabel>
                   <h3>人物背景</h3>
                 </IonLabel>
-                <IonText>{characters[id].background}</IonText>
+                <IonText>{characters[index].background}</IonText>
               </section>
             </IonCardContent>
           </IonCard>
